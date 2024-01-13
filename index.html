@@ -12,6 +12,36 @@
   
 </head>
 <style>
+  /* Default styles for all screen sizes */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for screens with a width of 600 pixels or less (typical for mobile devices) */
+@media only screen and (max-width: 600px) {
+    body {
+        height: auto; /* Adjust as needed for your content */
+    }
+    /* Other mobile-specific styles */
+}
+
+/* Styles for screens with a width between 601 and 1200 pixels (typical for tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+        height: 100vh; /* 100% of the viewport height */
+    }
+    /* Other tablet-specific styles */
+}
+
+/* Styles for screens with a width greater than 1200 pixels (typical for laptops and desktops) */
+@media only screen and (min-width: 1201px) {
+    body {
+        height: 100vh; /* 100% of the viewport height */
+    }
+    /* Other desktop-specific styles */
+}
+
     .container{
         padding-bottom: 70px;
         padding: 40px;
