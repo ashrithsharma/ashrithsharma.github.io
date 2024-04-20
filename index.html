@@ -8,6 +8,11 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <style>
     /* Custom CSS */
@@ -291,6 +296,33 @@
     transform: translateY(0); /* Slide to original position */
   }
 }
+/* Default styles for Swiper container */
+.swiper-container {
+    width: 100%; /* Set container width to 100% */
+    height: 300px; /* Set initial height for desktop */
+}
+
+/* Media query for tablets */
+@media (max-width: 992px) {
+    .swiper-container {
+        height: 250px; /* Adjust height for tablets */
+    }
+}
+
+/* Media query for smaller tablets and large smartphones */
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 200px; /* Adjust height for smaller tablets and large smartphones */
+    }
+}
+
+/* Media query for smartphones */
+@media (max-width: 576px) {
+    .swiper-container {
+        height: 150px; /* Adjust height for smartphones */
+    }
+}
+
 
 .social-icons a {
   color: #fff; /* Social icon color */
@@ -340,7 +372,7 @@
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Projects</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#experience">Experience</a>
@@ -356,7 +388,7 @@
   <!-- Hero Section -->
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="display-4">Ashrith Sharma Vempati</h1>
+      <h1 class="display-4">Ashrith Sharma Vempati </h1>
       <p class="lead">Welcome to my portfolio</p>
     </div>
   </section>
@@ -526,7 +558,16 @@
           </div>
       </div>
     </section>
-
+    <center>   <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="JavaHackerr.png" alt="Certificate 1" height="600" width="800"></div>
+          <div class="swiper-slide"><img src="SQLHAckerr.png" alt="Certificate 2" height="600" width="800"></div>
+          <div class="swiper-slide"><img src="Infosys.jpeg" alt="Certificate 3" height="600" width="800"></div>    <!-- Add more slides as needed -->
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+  </div></center>
+  
     <!-- Portfolio Section -->
     <section id="portfolio">
       <h2>Projects</h2>
@@ -632,10 +673,30 @@
       </div>
     </div>
   </footer>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    });
+</script>
+
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    
+  </script>
 </body>
 </html>
