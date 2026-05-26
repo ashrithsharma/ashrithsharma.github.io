@@ -1,715 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashrith Sharma</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<title>Ashrith Sharma Vempati - CV</title>
 
-  <style>
-    /* Custom CSS */
-    body {
-      font-family: Arial, sans-serif;
-      border-radius: 50%;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#1a1a1a;
+    line-height:1.5;
+    padding:40px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.header{
+    text-align:center;
+    border-bottom:2px solid #dcdcdc;
+    padding-bottom:20px;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:36px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.contact{
+    font-size:14px;
+    color:#444;
+}
+
+.contact a{
+    color:#0f62fe;
+    text-decoration:none;
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h2{
+    font-size:22px;
+    margin-bottom:14px;
+    padding-bottom:6px;
+    border-bottom:2px solid #e5e7eb;
+    color:#111827;
+}
+
+.summary{
+    text-align:justify;
+    font-size:15px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.skill-box{
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    padding:12px;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.skill-box strong{
+    color:#111827;
+}
+
+.job{
+    margin-bottom:28px;
+}
+
+.job-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    margin-bottom:6px;
+}
+
+.job-title{
+    font-size:18px;
+    font-weight:700;
+    color:#111827;
+}
+
+.company{
+    font-size:16px;
+    font-weight:600;
+    color:#2563eb;
+}
+
+.duration{
+    font-size:14px;
+    color:#555;
+}
+
+.location{
+    font-size:14px;
+    color:#666;
+}
+
+ul{
+    margin-top:10px;
+    padding-left:22px;
+}
+
+li{
+    margin-bottom:8px;
+    font-size:14px;
+    text-align:justify;
+}
+
+.edu-item{
+    margin-bottom:18px;
+}
+
+.edu-title{
+    font-weight:700;
+    font-size:16px;
+}
+
+.certifications ul,
+.languages ul,
+.additional ul{
+    padding-left:22px;
+}
+
+.footer{
+    text-align:center;
+    font-size:13px;
+    color:#777;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
     }
-    .navbar {
-      background-color:  #121c25 !important;
-    }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-    }
-    .jumbotron {
-      background-color: #121c25;
-      color: #fff;
-    }
-    .card {
-      margin-bottom: 30px;
-    }
-    .portfolio-img {
-      height:330px;
-      width:370px;
-     /* height: auto;*/
-      /*border-radius: 150px;*/
-    }
-    /* Custom CSS for Contact Information */
-#contact {
-    padding: 50px 0;
-    background-color:#121c25;
-    text-align: center;
 
+    .container{
+        padding:20px;
     }
 
-#contact h2 {
-    margin-bottom: 20px;
-    color:oklab(from blue l a b)
-}
-
-.contact-info {
-    max-width: 600px;
-    margin: 0 auto;
-}
-/* Custom CSS for About Section */
-#about h2 {
-    font-size: 28px; /* Increase the font size of the h2 element */
-}
-
-#about p {
-    font-size: 22px; /* Increase the font size of the paragraphs */
-}
-
-.contact-info p {
-    margin: 10px 0;
-    color: #666;
-}
-
-.contact-info strong {
-    color:#e8e9eb;
-}
-/* Custom CSS for Services Section */
-.card {
-    transition: transform 0.3s ease-in-out;
-    background-color: #121c25; /* Change the background color as needed */
-    border-radius: 10px; /* Add border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-/* Custom CSS for Footer */
-.footer {
-  background-color: #343a40; /* Footer background color */
-  color: #fff; /* Text color */
-  padding: 50px 0; /* Padding for content */
-  text-align: center; /* Center align content */
-}
-/* Custom CSS for Contact Information */
-.contact-container {
-  padding: 50px 20px; /* Add padding to the contact container */
-  text-align: center;
-  animation: slideIn 1s ease; /* Apply animation to the contact container */
-}
-
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color: #666;
-}
-
-.contact-info strong {
-  color: #000;
-}
-
-/* Define animation keyframes */
-@keyframes slideIn {
-  from {
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateY(-50px); /* Slide up by 50px */
-  }
-  to {
-    opacity: 1; /* End with full opacity */
-    transform: translateY(0); /* Slide to original position */
-  }
-}
-
-
-.footer-heading {
-  margin-bottom: 30px; /* Space between heading and social icons */
-}
-
-.social-icons {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
-}
-
-.social-icons li {
-  display: inline-block; /* Display social icons inline */
-  margin-right: 15px; /* Space between social icons */
-}
-
-.social-icons li:last-child {
-  margin-right: 0; /* Remove margin from last social icon */
-}
-
-/* Custom CSS for Contact Section */
-.contact-container {
-  padding: 50px;
-  text-align: center;
-  animation: slideIn 1s ease; /* Apply animation to the contact container */
-}
-
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-  color: white;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color:yellowgreen;
-}
-
-.contact-info strong {
-  color:yellow;
-}
-/* Custom CSS for Contact Information */
-.contact-container {
-  padding: 50px 20px; /* Add padding to the contact container */
-  text-align: center;
-  animation: slideIn 1s ease; /* Apply animation to the contact container */
-}
-
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color: #666;
-}
-
-.contact-info strong {
-  color: #000;
-}
-
-/* Define animation keyframes */
-@keyframes slideIn {
-  from {
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateY(-50px); /* Slide up by 50px */
-  }
-  to {
-    opacity: 1; /* End with full opacity */
-    transform: translateY(0); /* Slide to original position */
-  }
-}
-
-.social-icons a {
-  color: #fff; /* Social icon color */
-  font-size: 24px; /* Social icon size */
-  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
-}
-
-.social-icons a:hover {
-  color: #007bff; /* Change color on hover */
-}
-
-.footer-heading {
-  margin-bottom: 30px; /* Space between heading and social icons */
-}
-
-.social-icons {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
-}
-
-.social-icons li {
-  display: inline-block; /* Display social icons inline */
-  margin-right: 15px; /* Space between social icons */
-}
-
-.social-icons li:last-child {
-  margin-right: 0; /* Remove margin from last social icon */
-}
-
-/* Custom CSS for Contact Section */
-.contact-container {
-  padding: 50px;
-  text-align: center;
-  animation: slideIn 1s ease; /* Apply animation to the contact container */
-}
-
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color:white;
-}
-
-.contact-info strong {
-  color:yellowgreen;
-}
-
-/* Define animation keyframes */
-@keyframes slideIn {
-  from {
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateY(-50px); /* Slide up by 50px */
-  }
-  to {
-    opacity: 1; /* End with full opacity */
-    transform: translateY(0); /* Slide to original position */
-  }
-}
-
-/* Responsive CSS for Mobile Screens */
-@media (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 36px; /* Decrease font size for smaller screens */
-  }
-
-  .jumbotron p {
-    font-size: 16px; /* Decrease font size for smaller screens */
-  }
-
-  .portfolio-img {
-    max-width: 80%; /* Adjust image size for smaller screens */
-  }
-
-  .footer {
-    padding: 30px 0; /* Adjust footer padding for smaller screens */
-  }
-
-  .footer-heading {
-    font-size: 20px; /* Decrease font size for smaller screens */
-  }
-
-  .social-icons a {
-    font-size: 20px; /* Decrease social icon size for smaller screens */
-  }
-}
-
-
-/* Define animation keyframes */
-@keyframes slideIn {
-  from {
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateY(-50px); /* Slide up by 50px */
-  }
-  to {
-    opacity: 1; /* End with full opacity */
-    transform: translateY(0); /* Slide to original position */
-  }
-}
-/* Default styles for Swiper container */
-.swiper-container {
-    width: 100%; /* Set container width to 100% */
-    height: 300px; /* Set initial height for desktop */
-}
-
-/* Media query for tablets */
-@media (max-width: 992px) {
-    .swiper-container {
-        height: 250px; /* Adjust height for tablets */
+    .skills-grid{
+        grid-template-columns:1fr;
     }
-}
 
-/* Media query for smaller tablets and large smartphones */
-@media (max-width: 768px) {
-    .swiper-container {
-        height: 200px; /* Adjust height for smaller tablets and large smartphones */
+    .job-header{
+        flex-direction:column;
+        gap:4px;
     }
+
 }
 
-/* Media query for smartphones */
-@media (max-width: 576px) {
-    .swiper-container {
-        height: 150px; /* Adjust height for smartphones */
-    }
-}
-
-
-.social-icons a {
-  color: #fff; /* Social icon color */
-  font-size: 24px; /* Social icon size */
-  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
-}
-
-.social-icons a:hover {
-  color: #007bff; /* Change color on hover */
-}
-
-.card-title {
-    transition: color 0.3s ease-in-out;
-    color: #e8e9eb; /* Change the text color of the card title */
-}
-
-.card:hover .card-title {
-    color: #007bff;
-}
-
-.card-text {
-    transition: color 0.3s ease-in-out;
-    color: #6c757d; /* Change the text color of the card content */
-}
-
-.card:hover .card-text {
-    color: #ecf0e6;
-}
-
-  </style>
+</style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Ashrith Sharma Vempati</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <h1>Ashrith Sharma Vempati</h1>
+
+        <div class="contact">
+            Prakash Nagar, Begumpet, Hyderabad, Telangana <br><br>
+
+            📞 +91-8498082711 |
+            📧 <a href="mailto:ashrith.sharma11@gmail.com">
+            ashrith.sharma11@gmail.com</a> |
+            🔗 <a href="https://www.linkedin.com/in/ashrithsharmavempati" target="_blank">
+            LinkedIn</a> |
+            💻 <a href="https://ashrithsharma.github.io" target="_blank">
+            Portfolio</a>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="display-4">Ashrith Sharma Vempati </h1>
-      <p class="lead">Associate Software Engineer at Accenture Solutions pvt ltd</p>
-    </div>
-  </section>
+    <!-- SUMMARY -->
 
-  <!-- Main Content -->
-  <div class="container">
-    <!-- About Section -->
-    <section id="about">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="Cognizant.jpg" class="portfolio-img" alt="Your Picture" style=" height:200; width:150;">
-        </div>
-        <div class="col-md-6">
-          <h2>About Me</h2>
-          <p>I am a recent graduate with a Bachelor's degree in Computer Science and a strong passion for Java development. Although I am new to the industry, I have a solid foundation in Java programming acquired through coursework, projects, and internships. I recently joined Accenture as an "Associate Software Engineer", By joining in Accenture i'm open to work for any sort of changes that should be done for my professional behaviour and career.I'll try to interact to new individuals and learn from this on site experience</div>
-      </div>
-    </section>
-<br><br>
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Skills</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Web Design</h5>
-              <p class="card-text">I provide custom web design solutions tailored to your needs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <p class="card-text">From simple landing pages to complex web applications, I can bring your ideas to life.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Structural languages</h5>
-              <p class="card-text">HTML,CSS,JS for interface designing and front end development</p>
-            </div>
-          </div>
-        </div>
-          <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">XML</h5>
-              <p class="card-text">XML for project configurations.XSD(Schema definition)</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Article Writing</h5>
-              <p class="card-text">Interested in hypothetical thinking mostly in physics </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Research & Development</h5>
-              <p class="card-text">Analysis and initiating research for getting knowledge over market requirements</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Core Java</h5>
-                <p class="card-text">Developing java code for solving problems</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">C++ programming</h5>
-                <p class="card-text">Developing C++ code for solving problems</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">C programming</h5>
-                <p class="card-text">Developing C programming code for solving problems</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Apache Tomcat</h5>
-                <p class="card-text">Server configurations for Full Stack Development</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Java Server Pages(JSP)</h5>
-                <p class="card-text">Developing java server pages for server based deployment for User Interface</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Java Servlets</h5>
-                <p class="card-text">Servlets building for the server side scripting through Java language, using GET & POST methods</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Machine Learning</h5>
-                <p class="card-text">Understanding machine learning algorithms</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">GitHub</h5>
-                <p class="card-text">Version Management tool for project automation & Website hosting</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Maven</h5>
-                <p class="card-text">Maven Dependencies for Java maven project</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Data Analysis</h5>
-                <p class="card-text">Analysing data with the help of the Microsoft Excel for business needs</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">MySql</h5>
-                <p class="card-text">Interacting with databases for inquiring production data</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Presentations</h5>
-                <p class="card-text">I'm good at presenting any of the topic physically & Virtually</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Team player</h5>
-                <p class="card-text">I'll always work as a team player & always responsible around for work</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Team leader</h5>
-                <p class="card-text">Technical team in corporate fest which was organised by Forge alumnus pvt ltd</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Project Management</h5>
-                <p class="card-text">Working as an project Manager in Early seeded startup</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-     <!-- Portfolio Section -->
-    <section id="portfolio">
-      <h2>Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <a href="ashrithsharma.github.io">
-            <img src="as.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Portfolio Project</h5>
-              <p class="card-text">Developed portfolio website which resembles my complete professional information & showcases my skills with good CSS</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://ashrithsharma.github.io/W-bot.github.io/">
-            <img src="w-bot.png" class="card-img-top" alt="...">
-          </a>
-            <div class="card-body">
-              <h5 class="card-title">W-bot</h5>
-              <p class="card-text">Developed a predefined chatbot System for Women menstrual health & Suggestions and helps insecure people to read information.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="Child.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Mini Project</h5>
-              <p class="card-text">Developed an machine learning based face recognition appliction to find the missing child in real time circumstances. Used CNN for better results and Support vector machine for better filters & fosteres team work and team playing skils, helped my team in front end work & legalitites.</p>
-              <a href="Mini_Project.pdf" target="_blank">Download Documentation</a>
+    <div class="section">
+        <h2>Professional Summary</h2>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Experience Section -->
-<section id="experience">
-  <div class="container">
-    <h2>Experience</h2>
-    <div class="row">
-        <div class="col-md-4">
-        <div class="card">
-          <img src="header.jpg" height="155" width="340" style="background-color: whitesmoke;border-radius: 25px;">
-          <div class="card-body">
-            <h5 class="card-title">Associate Software Engineer</h5>
-            <p class="card-text">Accenture Solutions pvt ltd</p>
-            <p class="card-text">October 2024-present</p>
-            <p class="card-text">As the new joiner into the Software industry i learnt basic ettiquettes to follow and behave in my complete career so that i change my academic and graduation life to professional life. Will be looking forward to learn new things from new individuals , fellowmates and colleagues.</div>
-        </div>
-      </div>
-    
-      <!-- Experience Card 1 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="Forge.png" height="155" width="340" style="background-color: whitesmoke;border-radius: 25px;">
-          <div class="card-body">
-            <h5 class="card-title">Technical Team lead</h5>
-            <p class="card-text">Forge Alumnus pvt ltd</p>
-            <p class="card-text">January 2024 - April 2024 </p>
-            <p class="card-text">As the lead of the technical committee for our event, I orchestrate planning, resource allocation, and coordination, ensuring the seamless execution of all technical aspects for a successful event.</p>
-          </div>
-        </div>
-      </div>
-     </div>
-  </div>
-</section>
+        <p class="summary">
+            Data Engineer with experience supporting enterprise ETL, middleware,
+            and production-critical ecosystems across Banking and Insurance domains.
+            Skilled in IBM DataStage, IBM App Connect Enterprise (ACE v13),
+            IBM MQ, SQL Server, MySQL, SSIS, Ingres DB, Linked Servers,
+            and enterprise transaction processing within large-scale on-premise environments.
 
+            Experienced in Production, UAT, SIT, and Development support environments
+            ensuring operational stability, batch execution continuity, incident resolution,
+            and workflow validation. Strong exposure to ETL workflow monitoring,
+            queue management, endpoint validation, cross-platform connectivity troubleshooting,
+            TCP/IP diagnostics, firewall validation, and middleware operations.
 
-    <!-- Contact Section -->
-<section id="contact">
-    <div class="container contact-container">
-      <h2>Contact Me</h2>
-      <div class="contact-info">
-        <p><strong>Name:</strong><b>Ashrith Sharma</b></p>
-        <p><strong>Email:</strong><b>ashrith.sharma11@gmail.com</b></p>
-        <p><strong>Phone:</strong><b> +91 8498082711</b></p>
-        <p><strong>Address:</strong><b>Hyderabad,Telangana</b></p>
-      </div>
-    </div>
-  </section>
-  
-  </div>
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="footer-heading">Connect with Me</h2>
-          <ul class="social-icons">
-            <li><a href="https://www.instagram.com/chethhan.http/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/ashrithsharmavempati/"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/ashrithsharma"><i class="fab fa-github"></i></a></li>
-          </ul>
-          <p>    <p>&copy; 2024 Ashrith Sharma vempati reserves all rights.</p>
+            Hands-on expertise in enterprise operational support involving incidents,
+            problem tickets, service tasks, change management, root cause analysis,
+            infrastructure coordination, system validation, and production health monitoring.
         </p>
-        </div>
-      </div>
     </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    });
-</script>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    
-  </script>
+    <!-- SKILLS -->
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+                <strong>ETL & Integration</strong><br>
+                IBM DataStage, SSIS, IBM ACE v13, ETL/ELT,
+                EDW Architecture, Linked Servers
+            </div>
+
+            <div class="skill-box">
+                <strong>Middleware & Messaging</strong><br>
+                IBM MQ, MQ Explorer, IBM DataPower,
+                IBM BAW, XML, SOAP, ESB
+            </div>
+
+            <div class="skill-box">
+                <strong>Databases</strong><br>
+                SQL Server, MySQL, Ingres DB,
+                Oracle, DB2
+            </div>
+
+            <div class="skill-box">
+                <strong>Monitoring & Security</strong><br>
+                Dynatrace, CyberArk, Illumio,
+                ODBC Validation, Firewall Validation
+            </div>
+
+            <div class="skill-box">
+                <strong>Languages & Scripting</strong><br>
+                SQL, T-SQL, PowerShell,
+                Shell Scripting, Core Java
+            </div>
+
+            <div class="skill-box">
+                <strong>Core Concepts</strong><br>
+                OLTP, OLAP, Data Warehousing,
+                HA/Always On, RCA, TCP/IP Diagnostics
+            </div>
+
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+
+        <!-- ACCENTURE -->
+
+        <div class="job">
+
+            <div class="job-header">
+                <div>
+                    <div class="company">Accenture in India</div>
+                    <div class="job-title">Data Engineer</div>
+                    <div class="location">Hyderabad, India</div>
+                </div>
+
+                <div class="duration">
+                    Oct 2025 – Present
+                </div>
+            </div>
+
+            <ul>
+
+                <li>
+                    Supported enterprise ETL workflows, batch monitoring,
+                    workflow validation, and data extraction activities across
+                    Insurance and Financial Services environments.
+                </li>
+
+                <li>
+                    Fixed failed job pipelines and workflow failures ensuring
+                    uninterrupted business continuity and operational stability.
+                </li>
+
+                <li>
+                    Worked extensively with IBM Information Server Suite including
+                    Designer, Director, and Administrator.
+                </li>
+
+                <li>
+                    Performed reconciliation analysis, data validation,
+                    and job activity monitoring using MySQL and SSMS.
+                </li>
+
+                <li>
+                    Supported MS SSIS applications and SQL Server databases.
+                </li>
+
+                <li>
+                    Optimized Ingres local account onboarding into CyberArk
+                    improving troubleshooting efficiency by 90%.
+                </li>
+
+                <li>
+                    Worked with SQL DBAs on HA and Always On validation
+                    activities improving SSIS platform availability.
+                </li>
+
+                <li>
+                    Conducted ITV activities validating application
+                    responsiveness and infrastructure availability.
+                </li>
+
+                <li>
+                    Used PowerShell networking commands, Illumio firewall
+                    validation, and TCP/IP diagnostics for troubleshooting.
+                </li>
+
+                <li>
+                    Performed traceroute-based network analysis between
+                    enterprise servers and data centers.
+                </li>
+
+                <li>
+                    Executed ODBC 64-bit DSN validation and regression testing.
+                </li>
+
+                <li>
+                    Utilized Dynatrace for processor, memory,
+                    and infrastructure monitoring.
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- SECOND ROLE -->
+
+        <div class="job">
+
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        Packaged App Development Associate
+                    </div>
+                </div>
+
+                <div class="duration">
+                    Oct 2024 – Oct 2025
+                </div>
+            </div>
+
+            <ul>
+
+                <li>
+                    Supported enterprise banking and capital market applications
+                    across IBM ACE, IBM MQ, IBM DataPower, and IBM BAW.
+                </li>
+
+                <li>
+                    Managed IBM MQ queue operations including persistent message
+                    handling, rerouting, queue monitoring, and recovery.
+                </li>
+
+                <li>
+                    Supported IBM ACE message flow deployments,
+                    monitoring, and validation.
+                </li>
+
+                <li>
+                    Performed SOAP/XML request validation,
+                    endpoint troubleshooting, and redundancy analysis.
+                </li>
+
+                <li>
+                    Coordinated RCA activities, timeout resolution,
+                    and production incident management.
+                </li>
+
+                <li>
+                    Supported IBM DataPower DR activities and
+                    certificate management using IBM IKeyman.
+                </li>
+
+                <li>
+                    Performed enterprise environmental health checks
+                    and operational monitoring activities.
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- FORGE -->
+
+        <div class="job">
+
+            <div class="job-header">
+                <div>
+                    <div class="company">
+                        Forge Alumnus Services Pvt Ltd
+                    </div>
+
+                    <div class="job-title">
+                        Technical Committee Lead
+                    </div>
+
+                    <div class="location">
+                        Hyderabad, India
+                    </div>
+                </div>
+
+                <div class="duration">
+                    Jan 2024 – Apr 2024
+                </div>
+            </div>
+
+            <ul>
+
+                <li>
+                    Led Technical Committee operations and coordinated
+                    with startup, corporate, and hospitality teams.
+                </li>
+
+                <li>
+                    Supported smooth coordination for events involving
+                    800–1000 participants.
+                </li>
+
+                <li>
+                    Mentored hackathon participants and supported
+                    planning and execution activities.
+                </li>
+
+                <li>
+                    Improved inter-team collaboration through structured
+                    communication and execution tracking.
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+
+    <div class="section">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+            <div class="edu-title">
+                Sreyas Institute of Engineering & Technology
+            </div>
+
+            Bachelor of Technology (B.Tech) – Computer Science<br>
+            2020 – 2024
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-title">
+                Sri Chaitanya College of Education
+            </div>
+
+            2018 – 2020
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-title">
+                Bhashyam Educational Institutions
+            </div>
+
+            2017
+        </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS -->
+
+    <div class="section certifications">
+        <h2>Certifications</h2>
+
+        <ul>
+            <li>IBM App Connect Enterprise (ACE)</li>
+            <li>Core Java</li>
+            <li>Java</li>
+        </ul>
+    </div>
+
+    <!-- LANGUAGES -->
+
+    <div class="section languages">
+        <h2>Languages</h2>
+
+        <ul>
+            <li>English – Professional Working</li>
+            <li>Hindi – Limited Working</li>
+            <li>Telugu – Native/Bilingual</li>
+        </ul>
+    </div>
+
+    <!-- ADDITIONAL -->
+
+    <div class="section additional">
+        <h2>Additional Highlights</h2>
+
+        <ul>
+
+            <li>
+                Strong expertise in ETL, middleware,
+                and database troubleshooting across Banking
+                and Insurance ecosystems.
+            </li>
+
+            <li>
+                Hands-on experience managing production-critical
+                enterprise transaction workflows.
+            </li>
+
+            <li>
+                Proven exposure to SQL Server, AIX UNIX,
+                firewall validation, and Linked Server troubleshooting.
+            </li>
+
+            <li>
+                Recognized for analytical troubleshooting,
+                operational ownership, and enterprise production support.
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        © 2026 Ashrith Sharma Vempati
+    </div>
+
+</div>
+
 </body>
 </html>
